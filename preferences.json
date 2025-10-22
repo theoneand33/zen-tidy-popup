@@ -48,14 +48,8 @@
     "defaultValue": true
   },
   {
-    "property": "mod.forkedtidypopup.hidemoreiconbookmark",
-    "label": "Hide More Icon on Bookmark Bar",
-    "type": "checkbox",
-    "defaultValue": true
-  },
-  {
-    "property": "mod.forkedtidypopup.hidesidebaronfullscreen",
-    "label": "Hide Sidebar on Fullscreen (Fix Bug)",
+    "property": "mod.forkedtidypopup.flatstyletoolbar",
+    "label": "Enable/Disable Flat Style Toolbar",
     "type": "checkbox",
     "defaultValue": true
   }

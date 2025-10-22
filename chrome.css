@@ -87,7 +87,7 @@
           [overflowedItem="true"]
         )
         > toolbarbutton
-    ):not(.all-tabs-button):not(.remote-tabs-close-button):not(#zen-sidebar-foot-buttons *):not(#zen-sidebar-foot-buttons) {
+    ):not(.all-tabs-button):not(.remote-tabs-close-button):not(#zen-sidebar-foot-buttons *):not(#zen-sidebar-foot-buttons):not(#zen-site-data-new-addon-button) {
     border-radius: 8px !important;
     padding: 5px 10px !important;
     margin: var(--arrowpanel-menuitem-margin) !important;
@@ -162,10 +162,6 @@
 
   /* Tidy Up Extenstion */
   @media (-moz-bool-pref: "mod.forkedtidypopup.usetidyextension") {
-    #unified-extensions-view {
-      width: var(--menu-panel-width) !important;
-    }
-
     #unified-extensions-messages-container {
       margin: 0px !important;
     }
@@ -216,10 +212,13 @@
     }
   }
 
-  @media (-moz-bool-pref: "mod.forkedtidypopup.hidemoreiconbookmark") {
-    #PlacesChevron {
-      display: none !important;
-      margin: 0 !important;
+  /* Use Flat Style New Toolbar */
+  @media (-moz-bool-pref: "mod.forkedtidypopup.flatstyletoolbar") {
+    #zen-site-data-header toolbarbutton::before {
+      background: color-mix(in srgb, currentcolor 6%, transparent) !important;
+      box-shadow: none !important;
+      border: none !important;
+      appearance: none !important;
     }
   }
 }
@@ -300,13 +299,6 @@
           rgba(87, 65, 50, 255)
         ) !important;
       }
-    }
-  }
-
-  @media (-moz-bool-pref: "mod.forkedtidypopup.hidesidebaronfullscreen") {
-    #main-window[inDOMFullscreen="true"] #sidebar-box, 
-    #main-window[inDOMFullscreen="true"] #sidebar-splitter {
-      display: none !important;
     }
   }
 }
