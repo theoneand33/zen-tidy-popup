@@ -211,16 +211,6 @@
       justify-content: center !important;
     }
   }
-
-  /* Use Flat Style New Toolbar */
-  @media (-moz-bool-pref: "mod.forkedtidypopup.flatstyletoolbar") {
-    #zen-site-data-header toolbarbutton::before {
-      background: color-mix(in srgb, currentcolor 6%, transparent) !important;
-      box-shadow: none !important;
-      border: none !important;
-      appearance: none !important;
-    }
-  }
 }
 
 /* Custom Hover Colors - Only active when mod.forkedtidypopup.usecustomhovercolor is true */

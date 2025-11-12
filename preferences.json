@@ -46,11 +46,5 @@
     "label": "Enable/Disable Center Bookmark Bar",
     "type": "checkbox",
     "defaultValue": true
-  },
-  {
-    "property": "mod.forkedtidypopup.flatstyletoolbar",
-    "label": "Enable/Disable Flat Style Toolbar",
-    "type": "checkbox",
-    "defaultValue": true
   }
 ]
