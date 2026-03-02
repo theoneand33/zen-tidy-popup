@@ -1,138 +1,69 @@
 # Zen Tidy Popup
 
-A clean theme extension for Zen Browser and Firefox that modifies popup panels by replacing divider lines with empty spacers and making buttons more compact for a tidier, more polished interface.
+A clean, standalone theme for Zen Browser and Firefox that modifies popup panels with compact buttons, modern hover colors, and a tidier interface.
 
 ## Features
 
-- 🎨 **Clean Popup Design** - Replaces harsh divider lines with subtle empty spacers (optionally keep dividers)
+- 🎨 **Clean Popup Design** - Rounded corners, refined borders, and smooth shadows
 - 📏 **Compact Buttons** - Makes popup buttons more compact and visually appealing
-- 🌈 **Customizable Hover Colors** - Set custom hover colors for both light and dark themes
-- 🧩 **Zen Primary Color Integration** - Optionally use Zen Browser's primary color as the hover color
-- 🎯 **Rounded Corners** - Adds modern rounded corners to popup panels and buttons
-- 🔧 **Universal Compatibility** - Works with both Zen Browser and Firefox
-- 🧩 **Tidy Extension Panel** - Cleans up the unified extensions popup for a more organized look
-- 📚 **Center Bookmark Bar** - Centers bookmark items in the bookmark toolbar for a balanced layout
-- ⚡ **Lightweight** - Minimal CSS with no performance impact
-
-## Prerequisites
-
-Before installing this theme, you need to have **Sine** installed, which is a theme manager for Zen Browser and Firefox. If you don't know how to install Sine, [please click here to view the Sine installation Guide.](https://github.com/CosmoCreeper/Sine#%EF%B8%8F-installation)
-
-### Installing Sine
-
-1. Download Sine from the official repository
-2. Follow the installation instructions for your browser
-3. Restart your browser after installation
+- 🌈 **Custom Hover Colors** - Beautiful blue hover effect that works in both light and dark themes
+- 🎯 **Zen Primary Color Integration** - Automatically uses Zen Browser's primary color for hover states
+- 🔧 **Universal Compatibility** - Works with both Zen Browser and Firefox - no mod manager required!
+- 📚 **Tidy Extension Panel** - Cleans up the unified extensions popup for a more organized look
+- ⚡ **Lightweight** - Simple CSS with no dependencies or configuration needed
 
 ## Installation
 
-### Method 1: Through Sine Theme Store (Recommended)
+### Method 1: Using a UserChrome.css (Recommended)
 
-1. Open Sine menu in your browser
-2. Search for "Zen Tidy Popup" in the theme store
-3. Click "Install" on the theme
-4. The theme will be automatically applied
+1. Locate your browser profile folder
+2. Create a folder called `chrome` in your profile directory if it doesn't exist
+3. Copy `chrome.css` from this repository into the `chrome` folder
+4. Restart your browser
 
-### Method 2: Manual Installation
+The theme will be automatically applied on startup.
 
-If the theme is not available in the Sine theme store:
+### Method 2: As a Simple Extension
 
-1. Open Sine menu
-2. Enter the following repository URL:
-   ```
-   rasyidrafi/zen-tidy-popup
-   ```
-3. Click "Install" to add the theme
-4. The theme will be applied
+For a more flexible installation:
 
-## Customization Options
+1. Create a new folder for the extension
+2. Add a `manifest.json` file pointing to `chrome.css` as a user stylesheet
+3. Load the extension in your browser via `about:debugging`
 
-These options map directly to Sine preferences and drive the CSS in chrome.css.
+## Customization
 
-### Toggles
+The theme uses Zen Browser's primary color for hover effects by default. To customize the color, edit the `chrome.css` file and modify the CSS variables:
 
-- Enable/Disable Tidy Popup
-  - Property: mod.forkedtidypopup.usetidypopup
-  - Default: true
-- Keep divider lines
-  - Property: mod.forkedtidypopup.keepdividers
-  - Default: true
-  - When off, dividers are hidden and spacing is adjusted.
-- Enable/Disable custom hover color
-  - Property: mod.forkedtidypopup.usecustomhovercolor
-  - Default: true
-  - When off, no custom hover color is applied.
-- Use color from Zen Browser (overrides custom hover colors)
-  - Property: mod.forkedtidypopup.usezenprimarycolor
-  - Default: true
-  - If Zen primary color is available, it is used for both light and dark hover states.
-- Enable/Disable Tidy Extension
-  - Property: mod.forkedtidypopup.usetidyextension
-  - Default: true
-  - When enabled, applies clean styling to the unified extensions popup panel.
-- Enable/Disable Center Bookmark Bar
-  - Property: mod.forkedtidypopup.usecenterbookmarkbar
-  - Default: true
-  - When enabled, centers bookmark items in the bookmark toolbar for a more balanced layout.
+```css
+:root {
+  --mod-forkedtidypopup-hovercolor-light-final: rgba(80, 80, 250, 0.75);
+  --mod-forkedtidypopup-hovercolor-dark-final: rgba(80, 80, 250, 0.75);
+}
+```
 
-### Hover Colors
-
-Used only when mod.forkedtidypopup.usecustomhovercolor is true.
-
-- Button color when hovered (Light mode)
-  - Property: mod.forkedtidypopup.hovercolor.light
-  - Default: rgba(243,202,176,255)
-- Button color when hovered (Dark mode)
-  - Property: mod.forkedtidypopup.hovercolor.dark
-  - Default: rgba(87,65,50,255)
-
-Behavior and precedence:
-1) If usecustomhovercolor is false: no custom hover color is applied.
-2) If usecustomhovercolor is true AND usezenprimarycolor is true: Zen primary color is used for both light and dark.
-3) If usecustomhovercolor is true AND usezenprimarycolor is false: the manual colors above are used per scheme.
-
-Tip: If the Zen color looks incorrect or unavailable, disable “Use color from Zen Browser” and set manual colors.
-
-### How to Configure
-
-1. Open Sine menu in your browser
-2. Go to the theme settings for "Zen Tidy Popup"
-3. Adjust:
-   - Enable/Disable Tidy Popup
-   - Keep divider lines
-   - Enable/Disable custom hover color
-   - Use color from Zen Browser
-   - Button color when hovered (Light mode)
-   - Button color when hovered (Dark mode)
-   - Enable/Disable Tidy Extension
-   - Enable/Disable Center Bookmark Bar
-4. Changes apply automatically
+Replace the rgba values with your preferred colors.
 
 ## What This Theme Does
 
-- Removing or keeping dividers: Hide dividers entirely or keep the native separators
 - Compact button styling: Smaller, rounded, consistent hit areas
-- Enhanced hover effects: Customizable, light/dark-aware, optional Zen color integration
+- Enhanced hover effects: Blue hover color that integrates with Zen Browser's primary color
 - Modern panel design: Rounded corners, refined borders and shadows
 - Better spacing: Optimized padding and margins for a cleaner look
 - Tidy extensions panel: Streamlined unified extensions popup with improved layout and spacing
-- Centered bookmark bar: Bookmark items are centered for a more balanced and aesthetically pleasing layout
 
 ## How it works
 
-- chrome.css reads the prefs via @media (-moz-bool-pref: ...) to toggle features:
-  - mod.forkedtidypopup.usetidypopup gates all panel styling
-  - mod.forkedtidypopup.keepdividers toggles separator visibility and layout
-  - mod.forkedtidypopup.usecustomhovercolor enables hover color rules
-  - mod.forkedtidypopup.usezenprimarycolor switches hover color source to --zen-primary-color
-  - mod.forkedtidypopup.usetidyextension applies specialized styling to the extensions popup
-  - mod.forkedtidypopup.usecenterbookmarkbar centers bookmark items in the toolbar
-- Light/Dark hover colors automatically follow your system color scheme.
+The theme applies CSS styling directly to Firefox/Zen Browser UI elements:
+- All features are enabled by default (no configuration needed)
+- Hover colors use Zen Browser's primary color when available, with a fallback to the default blue
+- Light/Dark hover colors automatically follow your system color scheme
+- Simply place `chrome.css` in your profile's `chrome/` folder and restart
 
 ## Compatibility
 
 - ✅ Zen Browser
-- ✅ Firefox (with Sine installed)
+- ✅ Firefox
 
 ## Credits
 

@@ -1,25 +1,7 @@
 [
   {
-    "property": "mod.forkedtidypopup.usetidypopup",
-    "label": "Enable/Disable Tidy Popup",
-    "type": "checkbox",
-    "defaultValue": true
-  },
-  {
-    "property": "mod.forkedtidypopup.keepdividers",
-    "label": "Keep divider lines",
-    "type": "checkbox",
-    "defaultValue": true
-  },
-  {
-    "property": "mod.forkedtidypopup.usecustomhovercolor",
-    "label": "Enable/Disable custom hover color",
-    "type": "checkbox",
-    "defaultValue": true
-  },
-  {
     "property": "mod.forkedtidypopup.usezenprimarycolor",
-    "label": "Use color from Zen Browser (will override the custom hover color below)",
+    "label": "Use Zen Browser primary color for hover effects",
     "type": "checkbox",
     "defaultValue": true
   },
@@ -27,24 +9,12 @@
     "property": "mod.forkedtidypopup.hovercolor.light",
     "label": "Button color when hovered (Light mode)",
     "type": "string",
-    "defaultValue": "rgba(243,202,176,255)"
+    "defaultValue": "rgba(80, 80, 250, 0.75)"
   },
   {
     "property": "mod.forkedtidypopup.hovercolor.dark",
     "label": "Button color when hovered (Dark mode)",
     "type": "string",
-    "defaultValue": "rgba(87,65,50,255)"
-  },
-  {
-    "property": "mod.forkedtidypopup.usetidyextension",
-    "label": "Enable/Disable Tidy Extension",
-    "type": "checkbox",
-    "defaultValue": true
-  },
-  {
-    "property": "mod.forkedtidypopup.usecenterbookmarkbar",
-    "label": "Enable/Disable Center Bookmark Bar",
-    "type": "checkbox",
-    "defaultValue": true
+    "defaultValue": "rgba(80, 80, 250, 0.75)"
   }
 ]
