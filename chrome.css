@@ -1,5 +1,3 @@
-/* Zen Tidy Popup - Standalone Version (No Sine Required) */
-
 /* Main Popup Styling - Always Active */
 menupopup,
 panel {
@@ -21,11 +19,7 @@ panel {
       100% - 2 * var(--panel-shadow-margin),
       1px
     ) !important;
-    max-width: round(
-      up,
-      100% - 2 * var(--panel-shadow-margin),
-      1px
-    ) !important;
+    max-width: round(up, 100% - 2 * var(--panel-shadow-margin), 1px) !important;
     overflow: clip !important;
     scrollbar-color: transparent !important;
   }
@@ -46,7 +40,9 @@ panel {
         [overflowedItem="true"]
       )
       > toolbarbutton
-  ):not(.all-tabs-button):not(.remote-tabs-close-button):not(#zen-sidebar-foot-buttons *):not(#zen-sidebar-foot-buttons):not(#zen-site-data-new-addon-button) {
+  ):not(.all-tabs-button):not(.remote-tabs-close-button):not(
+    #zen-sidebar-foot-buttons *
+  ):not(#zen-sidebar-foot-buttons):not(#zen-site-data-new-addon-button) {
   border-radius: 8px !important;
   padding: 5px 10px !important;
   margin: var(--arrowpanel-menuitem-margin) !important;
@@ -153,15 +149,15 @@ menucaption {
   menuitem,
   menucaption,
   :is(
-      panelview .toolbarbutton-1,
-      toolbarbutton.subviewbutton,
-      .widget-overflow-list .toolbarbutton-1,
-      .toolbaritem-combined-buttons:is(
-          :not([cui-areatype="toolbar"]),
-          [overflowedItem="true"]
-        )
-        > toolbarbutton
-    ) {
+    panelview .toolbarbutton-1,
+    toolbarbutton.subviewbutton,
+    .widget-overflow-list .toolbarbutton-1,
+    .toolbaritem-combined-buttons:is(
+        :not([cui-areatype="toolbar"]),
+        [overflowedItem="true"]
+      )
+      > toolbarbutton
+  ) {
     &:hover {
       background-color: var(--tidy-hover-light) !important;
     }
@@ -174,15 +170,15 @@ menucaption {
   menuitem,
   menucaption,
   :is(
-      panelview .toolbarbutton-1,
-      toolbarbutton.subviewbutton,
-      .widget-overflow-list .toolbarbutton-1,
-      .toolbaritem-combined-buttons:is(
-          :not([cui-areatype="toolbar"]),
-          [overflowedItem="true"]
-        )
-        > toolbarbutton
-    ) {
+    panelview .toolbarbutton-1,
+    toolbarbutton.subviewbutton,
+    .widget-overflow-list .toolbarbutton-1,
+    .toolbaritem-combined-buttons:is(
+        :not([cui-areatype="toolbar"]),
+        [overflowedItem="true"]
+      )
+      > toolbarbutton
+  ) {
     &:hover {
       background-color: var(--tidy-hover-dark) !important;
     }
