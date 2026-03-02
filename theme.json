@@ -1,22 +1,17 @@
 {
   "id": "f966100a-4fed-4df5-a082-f001c5bd654e",
-  "name": "Tidy Popup & Extension",
-  "description": "Cleans up popup panels & extensions with optional dividers, compact buttons, and customizable hover colors. Supports using Zen Browser’s primary color or manual light/dark hover colors with conditional preferences.",
-  "homepage": "https://github.com/rasyidrafi/zen-tidy-popup/",
-  "image": "https://github.com/rasyidrafi/zen-tidy-popup/blob/main/thumbnail.png?raw=true",
+  "name": "Tidy Popup++",
+  "description": "A clean, standalone theme for Zen Browser and Firefox that modifies popup panels with compact buttons, modern hover colors, and a tidier interface.",
+  "homepage": "https://github.com/theoneand33/zen-tidy-popup",
+  "image": "https://github.com/theoneand33/zen-tidy-popup/blob/main/thumbnail.png?raw=true",
   "style": {
-    "chrome": "https://raw.githubusercontent.com/rasyidrafi/zen-tidy-popup/refs/heads/main/chrome.css"
+    "chrome": "https://raw.githubusercontent.com/theoneand33/zen-tidy-popup/refs/heads/main/chrome.css"
   },
-  "readme": "https://raw.githubusercontent.com/rasyidrafi/zen-tidy-popup/refs/heads/main/README.md",
-  "preferences": "https://raw.githubusercontent.com/rasyidrafi/zen-tidy-popup/refs/heads/main/preferences.json",
-  "author": "rasyidrafi",
-  "version": "2.9.1",
-  "tags": [
-    "Customization",
-    "Popup",
-    "Theme",
-    "UI"
-  ],
+  "readme": "https://raw.githubusercontent.com/theoneand33/zen-tidy-popup/refs/heads/main/README.md",
+  "preferences": "https://raw.githubusercontent.com/theoneand33/zen-tidy-popup/refs/heads/main/preferences.json",
+  "author": "theoneand33",
+  "version": "2.9.2",
+  "tags": ["Customization", "Popup", "Theme", "UI"],
   "createdAt": "2025-01-27",
   "updatedAt": "2025-11-12",
   "fork": ["zen", "firefox"]
