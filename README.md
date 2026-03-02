@@ -41,5 +41,3 @@ This project is open source and available under MIT.
 [Dinno-DEV](https://github.com/Dinno-DEV)  
 [rasyidrafi](https://github.com/rasyidrafi)  
 [theoneand33](https://github.com/theoneand33)  
-
----
