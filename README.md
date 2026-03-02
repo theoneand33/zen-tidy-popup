@@ -38,7 +38,7 @@ Found a bug or want to suggest an improvement? Feel free to open an issue or sub
 
 This project is open source and available under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 
-## Author
+## Authors
 
 [Dinno-DEV](https://github.com/Dinno-DEV)  
 [rasyidrafi](https://github.com/rasyidrafi)  
