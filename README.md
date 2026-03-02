@@ -11,19 +11,6 @@ A clean, standalone theme for Zen Browser and Firefox that modifies popup panels
 
 The theme will be automatically applied on startup.
 
-## Customization
-
-The theme uses Zen Browser's primary color for hover effects by default. To customize the color, edit the `chrome.css` file and modify the CSS variables:
-
-```css
-:root {
-  --mod-forkedtidypopup-hovercolor-light-final: rgba(80, 80, 250, 0.75);
-  --mod-forkedtidypopup-hovercolor-dark-final: rgba(80, 80, 250, 0.75);
-}
-```
-
-Replace the rgba values with your preferred colors.
-
 ## What This Theme Does
 
 - Compact button styling: Smaller, rounded, consistent hit areas
@@ -35,7 +22,6 @@ Replace the rgba values with your preferred colors.
 ## Compatibility
 
 - ✅ Zen Browser
-- ✅ Firefox
 
 ## Credits
 
@@ -44,14 +30,16 @@ Then forked from [rasyidrafi/zen-tidy-popup](https://github.com/rasyidrafi/zen-t
 
 ## Contributing
 
-Found a bug or want to suggest an improvement? Feel free to open an issue or submit a pull request on the [GitHub repository](https://github.com/rasyidrafi/zen-tidy-popup/).
+Found a bug or want to suggest an improvement? Feel free to open an issue or submit a pull request on the [GitHub repository](https://github.com/theoneand33/zen-tidy-popup/).
 
 ## License
 
-This project is open source and available under standard open source terms.
+This project is open source and available under MIT.
 
 ## Author
 
-Modified and enhanced by [rasyidrafi](https://github.com/rasyidrafi)
+[Dinno-DEV](https://github.com/Dinno-DEV)
+[rasyidrafi](https://github.com/rasyidrafi)
+[theoneand33](https://github.com/theoneand33)
 
 ---
