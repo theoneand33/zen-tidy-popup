@@ -1,7 +1,7 @@
 {
   "id": "f966100a-4fed-4df5-a082-f001c5bd654e",
   "name": "Tidy Popup++",
-  "description": "A clean, standalone theme for Zen Browser and Firefox that modifies popup panels with compact buttons, modern hover colors, and a tidier interface.",
+  "description": "A clean theme for Zen Browser that makes popup panels compact and modern.",
   "homepage": "https://github.com/theoneand33/zen-tidy-popup",
   "image": "https://github.com/theoneand33/zen-tidy-popup/blob/main/thumbnail.png?raw=true",
   "style": {
@@ -12,7 +12,7 @@
   "author": "theoneand33",
   "version": "2.9.2",
   "tags": ["Customization", "Popup", "Theme", "UI"],
-  "createdAt": "2025-01-27",
-  "updatedAt": "2025-11-12",
+  "createdAt": "2026-03-02",
+  "updatedAt": "2026-03-03",
   "fork": ["zen", "firefox"]
 }

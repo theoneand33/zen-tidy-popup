@@ -1,6 +1,6 @@
 # Tidy Popup++
 
-A clean, standalone theme for Zen Browser and Firefox that modifies popup panels with compact buttons, modern hover colors, and a tidier interface.
+A clean theme for Zen Browser that makes popup panels compact and modern.
 
 ## Installation
 
@@ -40,4 +40,4 @@ This project is open source and available under MIT.
 
 [Dinno-DEV](https://github.com/Dinno-DEV)  
 [rasyidrafi](https://github.com/rasyidrafi)  
-[theoneand33](https://github.com/theoneand33)  
+[theoneand33](https://github.com/theoneand33)
