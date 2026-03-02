@@ -21,7 +21,7 @@ The theme will be automatically applied on startup.
 
 ## Compatibility
 
-- ✅ Zen Browser
+-  Zen Browser
 
 ## Credits
 
