@@ -1,4 +1,4 @@
-# Zen Tidy Popup
+# Tidy Popup++
 
 A clean, standalone theme for Zen Browser and Firefox that modifies popup panels with compact buttons, modern hover colors, and a tidier interface.
 
