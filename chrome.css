@@ -122,7 +122,7 @@ menucaption {
 }
 
 /* If using Zen Browser primary color, override with it */
-@media (-moz-bool-pref: "mod.forkedtidypopup.usezenprimarycolor") {
+@media (-moz-bool-pref: "mod.tidypopupv2.usezenprimarycolor") {
   :root {
     --tidy-hover-light: var(--zen-primary-color);
     --tidy-hover-dark: var(--zen-primary-color);
@@ -130,14 +130,14 @@ menucaption {
 }
 
 /* If not using Zen primary, use custom color preferences */
-@media not (-moz-bool-pref: "mod.forkedtidypopup.usezenprimarycolor") {
+@media not (-moz-bool-pref: "mod.tidypopupv2.usezenprimarycolor") {
   :root {
     --tidy-hover-light: var(
-      --mod-forkedtidypopup-hovercolor-light,
+      --mod-tidypopupv2-hovercolor-light,
       rgba(80, 80, 250, 0.75)
     );
     --tidy-hover-dark: var(
-      --mod-forkedtidypopup-hovercolor-dark,
+      --mod-tidypopupv2-hovercolor-dark,
       rgba(80, 80, 250, 0.75)
     );
   }
