@@ -34,7 +34,7 @@ Found a bug or want to suggest an improvement? Feel free to open an issue or sub
 
 ## License
 
-This project is open source and available under MIT.
+This project is open source and available under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 
 ## Author
 
