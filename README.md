@@ -4,10 +4,12 @@ A clean theme for Zen Browser that makes popup panels compact and modern.
 
 ## Installation
 
-1. Locate your browser profile folder
-2. Create a folder called `chrome` in your profile directory if it doesn't exist
-3. Copy `chrome.css` from this repository into the `chrome` folder
-4. Restart your browser
+1. Open `about:config` and accept the warning
+2. Search for `toolkit.legacyUserProfileCustomizations.stylesheets` and set it to `true`
+3. Open `about:profiles` and locate your profile folder
+4. Copy `chrome.css` from this repository into the `chrome` folder
+5. Rename it to `userChrome.css`
+6. Restart your browser
 
 The theme will be automatically applied on startup.
 
