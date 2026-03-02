@@ -25,7 +25,7 @@ The theme will be automatically applied on startup.
 
 ## Credits
 
-Originally forked from [Dinno-DEV/zen-tidy-popup](https://github.com/Dinno-DEV/zen-tidy-popup)
+Originally forked from [Dinno-DEV/zen-tidy-popup](https://github.com/Dinno-DEV/zen-tidy-popup)  
 Then forked from [rasyidrafi/zen-tidy-popup](https://github.com/rasyidrafi/zen-tidy-popup)
 
 ## Contributing
@@ -38,8 +38,8 @@ This project is open source and available under MIT.
 
 ## Author
 
-[Dinno-DEV](https://github.com/Dinno-DEV)
-[rasyidrafi](https://github.com/rasyidrafi)
-[theoneand33](https://github.com/theoneand33)
+[Dinno-DEV](https://github.com/Dinno-DEV)  
+[rasyidrafi](https://github.com/rasyidrafi)  
+[theoneand33](https://github.com/theoneand33)  
 
 ---
