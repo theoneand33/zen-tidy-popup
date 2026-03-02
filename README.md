@@ -1,4 +1,4 @@
-# Tidy Popup++
+# Tidy Popup v2
 
 A clean theme for Zen Browser that makes popup panels compact and modern.
 
