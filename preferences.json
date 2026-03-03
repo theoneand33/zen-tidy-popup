@@ -16,5 +16,104 @@
     "label": "Button color when hovered (Dark mode)",
     "type": "string",
     "defaultValue": "rgba(80, 80, 250, 0.75)"
+  },
+  {
+    "property": "mod.tidypopupv2.popupsize",
+    "label": "Popup padding (e.g., 6px, 0.5em)",
+    "type": "string",
+    "defaultValue": "6px",
+    "placeholder": "e.g., 6px, 0.5em"
+  },
+  {
+    "property": "mod.tidypopupv2.borderradius",
+    "label": "Popup border radius (e.g., 15px, 1em)",
+    "type": "string",
+    "defaultValue": "8px",
+    "placeholder": "e.g., 8px, 1em"
+  },
+  {
+    "property": "mod.tidypopupv2.buttonradius",
+    "label": "Button border radius (e.g., 8px, 0.5em)",
+    "type": "string",
+    "defaultValue": "8px",
+    "placeholder": "e.g., 8px, 0.5em"
+  },
+  {
+    "property": "mod.tidypopupv2.enabletransitions",
+    "label": "Enable smooth hover animations",
+    "type": "checkbox",
+    "defaultValue": true
+  },
+  {
+    "property": "mod.tidypopupv2.transitionduration",
+    "label": "Transition duration (e.g., 0.15s, 200ms)",
+    "type": "string",
+    "defaultValue": "0.15s",
+    "placeholder": "e.g., 0.15s, 200ms"
+  },
+  {
+    "property": "mod.tidypopupv2.transitiontiming",
+    "label": "Transition timing function",
+    "type": "dropdown",
+    "defaultValue": "ease",
+    "options": [
+      { "label": "Ease", "value": "ease" },
+      { "label": "Linear", "value": "linear" },
+      { "label": "Ease In", "value": "ease-in" },
+      { "label": "Ease Out", "value": "ease-out" },
+      { "label": "Ease In Out", "value": "ease-in-out" }
+    ]
+  },
+  {
+    "property": "mod.tidypopupv2.shadow",
+    "label": "Popup box-shadow (e.g., var(--panel-shadow), 0 2px 10px rgba(0,0,0,0.3))",
+    "type": "string",
+    "defaultValue": "var(--panel-shadow)",
+    "placeholder": "e.g., var(--panel-shadow) or custom value"
+  },
+  {
+    "property": "mod.tidypopupv2.shadowmargin",
+    "label": "Popup shadow margin (e.g., 4px, 0.25em)",
+    "type": "string",
+    "defaultValue": "var(--panel-shadow-margin)",
+    "placeholder": "e.g., 4px, 0.25em"
+  },
+  {
+    "property": "mod.tidypopupv2.layoutmode",
+    "label": "Layout density mode",
+    "type": "dropdown",
+    "defaultValue": "compact",
+    "options": [
+      { "label": "Compact", "value": "compact" },
+      { "label": "Extended", "value": "extended" }
+    ]
+  },
+  {
+    "property": "mod.tidypopupv2.compactpadding",
+    "label": "Compact mode button padding (e.g., 4px 8px)",
+    "type": "string",
+    "defaultValue": "4px 8px",
+    "placeholder": "e.g., 4px 8px, 0.25em 0.5em"
+  },
+  {
+    "property": "mod.tidypopupv2.extendedpadding",
+    "label": "Extended mode button padding (e.g., 8px 16px)",
+    "type": "string",
+    "defaultValue": "8px 16px",
+    "placeholder": "e.g., 8px 16px, 0.5em 1em"
+  },
+  {
+    "property": "mod.tidypopupv2.compactmargin",
+    "label": "Compact mode button margin (e.g., 2px)",
+    "type": "string",
+    "defaultValue": "var(--arrowpanel-menuitem-margin)",
+    "placeholder": "e.g., 2px, var(--arrowpanel-menuitem-margin)"
+  },
+  {
+    "property": "mod.tidypopupv2.extendedmargin",
+    "label": "Extended mode button margin (e.g., 4px)",
+    "type": "string",
+    "defaultValue": "4px",
+    "placeholder": "e.g., 4px, 0.25em"
   }
 ]

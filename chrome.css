@@ -1,127 +1,67 @@
-/* Main Popup Styling - Always Active */
-menupopup,
-panel {
-  &::part(content) {
-    display: flex !important;
-    box-sizing: border-box !important;
-    padding: 6px !important;
-    color: var(--panel-color) !important;
-    border-radius: 15px !important;
-    border: 2px solid
-      color-mix(in hsl, var(--panel-border-color), transparent 70%) !important;
-    width: var(--panel-width) !important;
-    box-shadow: var(--panel-shadow) !important;
-    margin: var(--panel-shadow-margin) !important;
-    min-width: 0 !important;
-    min-height: 0 !important;
-    max-height: round(
-      up,
-      100% - 2 * var(--panel-shadow-margin),
-      1px
-    ) !important;
-    max-width: round(up, 100% - 2 * var(--panel-shadow-margin), 1px) !important;
-    overflow: clip !important;
-    scrollbar-color: transparent !important;
+@-moz-document url("chrome://") {
+
+/* =====================================================
+   Tidy Popup v2 - A clean theme for Zen Browser
+   Making popup panels compact and modern
+   ===================================================== */
+
+/* -----------------------------------------------------
+   CSS Custom Properties & Default Values
+   These are overridden by user preferences
+   ----------------------------------------------------- */
+:root {
+  /* Transition control (enabled/disabled via checkbox) */
+  --tidy-transition-props: none;
+}
+
+/* Enable transitions when checkbox is true */
+@media (-moz-pref("mod.tidypopupv2.enabletransitions")) {
+  :root {
+    --tidy-transition-props: background-color var(
+      --mod-tidypopupv2-transitionduration,
+      0.15s
+    ) var(--mod-tidypopupv2-transitiontiming, ease) !important;
   }
 }
 
-#appMenu-zoomReset-button2 {
-  margin: 2px 0px !important;
-  padding: 0px 5px !important;
-}
-
-/* Compact Button Styling */
-:is(
-    panelview .toolbarbutton-1,
-    toolbarbutton.subviewbutton,
-    .widget-overflow-list .toolbarbutton-1,
-    .toolbaritem-combined-buttons:is(
-        :not([cui-areatype="toolbar"]),
-        [overflowedItem="true"]
-      )
-      > toolbarbutton
-  ):not(.all-tabs-button):not(.remote-tabs-close-button):not(
-    #zen-sidebar-foot-buttons *
-  ):not(#zen-sidebar-foot-buttons):not(#zen-site-data-new-addon-button) {
-  border-radius: 8px !important;
-  padding: 5px 10px !important;
-  margin: var(--arrowpanel-menuitem-margin) !important;
-}
-
-.remote-tabs-close-button {
-  border-radius: 8px !important;
-  padding: 5px !important;
-}
-
-.remote-tabs-close-button label.toolbarbutton-text {
-  display: none !important;
-}
-
-menuitem {
-  border-radius: 8px !important;
-  margin: var(--arrowpanel-menuitem-margin) !important;
-  padding: 5px 10px !important;
-}
-
-menuitem.menuitem-iconic,
-menu.menu-iconic {
-  padding: 5px 10px !important;
-}
-
-menu,
-menucaption {
-  border-radius: 8px !important;
-  margin: var(--arrowpanel-menuitem-margin) !important;
-  padding: 5px 10px !important;
-}
-
-.panel-view-body-unscrollable {
-  border-radius: 8px !important;
-  background: var(--button-background-color-hover) !important;
-  align-items: center !important;
-  padding: 3px !important;
-}
-
-.downloadMainArea {
-  padding-left: 10px !important;
-}
-
-/* Fix panel header h1 span pseudo-element */
-.panel-header h1 > span::before {
-  display: unset !important;
-}
-
-/* Fix manage account */
-#fxa-menu-header-title,
-#fxa-menu-header-description {
-  margin-left: -30px !important;
-  padding-left: 15px !important;
-}
-
-/* Fix sync button */
-#PanelUI-fxa-menu-syncnow-button hbox label.syncnow-label {
-  margin-left: -30px !important;
-  padding-left: 15px !important;
-}
-
-.PanelUI-tabitem-container.all-tabs-item {
-  margin: var(--arrowpanel-menuitem-margin) !important;
-  border-radius: 8px !important;
-  overflow: hidden;
-}
-
-.all-tabs-button.subviewbutton.subviewbutton-iconic {
-  padding: 5px 10px 5px calc(10px + var(--uc-arrowpanel-menuicon-margin-inline)) !important;
-  border-radius: 8px !important;
-}
-
-/* Custom Hover Colors */
+/* Base values with preference overrides */
 :root {
+  /* Size preference (spacing) */
+  --tidy-popup-padding: var(
+    --mod-tidypopupv2-popupsize,
+    6px
+  ) !important;
+
+  /* Border radius preferences */
+  --tidy-radius: var(
+    --mod-tidypopupv2-borderradius,
+    8px
+  ) !important;
+
+  --tidy-button-radius: var(
+    --mod-tidypopupv2-buttonradius,
+    8px
+  ) !important;
+
+  /* Shadow customization */
+  --tidy-popup-shadow: var(
+    --mod-tidypopupv2-shadow,
+    var(--panel-shadow)
+  ) !important;
+
+  --tidy-popup-shadow-margin: var(
+    --mod-tidypopupv2-shadowmargin,
+    var(--panel-shadow-margin)
+  ) !important;
+
+  /* Hover colors */
   --tidy-hover-light: rgba(80, 80, 250, 0.75);
   --tidy-hover-dark: rgba(80, 80, 250, 0.75);
 }
 
-/* If using Zen Browser primary color, override with it */
+/* -----------------------------------------------------
+   Preference: Use Zen Browser primary color
+   ----------------------------------------------------- */
 @media (-moz-pref("mod.tidypopupv2.usezenprimarycolor")) {
   :root {
     --tidy-hover-light: var(--zen-primary-color);
@@ -143,7 +83,170 @@ menucaption {
   }
 }
 
-/* Light mode hover color */
+/* -----------------------------------------------------
+   Mode: Compact / Extended
+   Controls density of popup layouts
+   ----------------------------------------------------- */
+/* Compact mode (default) */
+@media (-moz-pref("mod.tidypopupv2.layoutmode", "compact")) {
+  :root {
+    --tidy-mode-padding: var(
+      --mod-tidypopupv2-compactpadding,
+      4px 8px
+    ) !important;
+    --tidy-mode-margin: var(
+      --mod-tidypopupv2-compactmargin,
+      var(--arrowpanel-menuitem-margin)
+    ) !important;
+  }
+}
+
+/* Extended mode */
+@media (-moz-pref("mod.tidypopupv2.layoutmode", "extended")) {
+  :root {
+    --tidy-mode-padding: var(
+      --mod-tidypopupv2-extendedpadding,
+      8px 16px
+    ) !important;
+    --tidy-mode-margin: var(
+      --mod-tidypopupv2-extendedmargin,
+      4px
+    ) !important;
+  }
+}
+
+/* -----------------------------------------------------
+   Base Popup Container Styling
+   ----------------------------------------------------- */
+menupopup,
+panel {
+  &::part(content) {
+    display: flex !important;
+    box-sizing: border-box !important;
+    padding: var(--tidy-popup-padding) !important;
+    color: var(--panel-color) !important;
+    border-radius: var(--tidy-radius) !important;
+    border: 2px solid
+      color-mix(in hsl, var(--panel-border-color), transparent 70%) !important;
+    width: var(--panel-width) !important;
+    box-shadow: var(--tidy-popup-shadow) !important;
+    margin: var(--tidy-popup-shadow-margin) !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-height: round(
+      up,
+      100% - 2 * var(--tidy-popup-shadow-margin),
+      1px
+    ) !important;
+    max-width: round(up, 100% - 2 * var(--tidy-popup-shadow-margin), 1px) !important;
+    overflow: clip !important;
+    scrollbar-color: transparent !important;
+  }
+}
+
+/* -----------------------------------------------------
+   Specific Element Fixes
+   ----------------------------------------------------- */
+#appMenu-zoomReset-button2 {
+  margin: 2px 0px !important;
+  padding: 0px 5px !important;
+}
+
+/* Fix panel header h1 span pseudo-element */
+.panel-header h1 > span::before {
+  display: unset !important;
+}
+
+/* Fix manage account */
+#fxa-menu-header-title,
+#fxa-menu-header-description {
+  margin-left: -30px !important;
+  padding-left: 15px !important;
+}
+
+/* Fix sync button */
+#PanelUI-fxa-menu-syncnow-button hbox label.syncnow-label {
+  margin-left: -30px !important;
+  padding-left: 15px !important;
+}
+
+.downloadMainArea {
+  padding-left: 10px !important;
+}
+
+/* -----------------------------------------------------
+   Button & Menu Item Styling
+   ----------------------------------------------------- */
+:is(
+    panelview .toolbarbutton-1,
+    toolbarbutton.subviewbutton,
+    .widget-overflow-list .toolbarbutton-1,
+    .toolbaritem-combined-buttons:is(
+        :not([cui-areatype="toolbar"]),
+        [overflowedItem="true"]
+      )
+      > toolbarbutton
+  ):not(.all-tabs-button):not(.remote-tabs-close-button):not(
+    #zen-sidebar-foot-buttons *
+  ):not(#zen-sidebar-foot-buttons):not(#zen-site-data-new-addon-button) {
+  border-radius: var(--tidy-button-radius) !important;
+  padding: var(--tidy-mode-padding) !important;
+  margin: var(--tidy-mode-margin) !important;
+  transition: var(--tidy-transition-props) !important;
+}
+
+.remote-tabs-close-button {
+  border-radius: var(--tidy-button-radius) !important;
+  padding: var(--tidy-mode-padding) !important;
+  transition: var(--tidy-transition-props) !important;
+}
+
+.remote-tabs-close-button label.toolbarbutton-text {
+  display: none !important;
+}
+
+menuitem {
+  border-radius: var(--tidy-radius) !important;
+  margin: var(--tidy-mode-margin) !important;
+  padding: var(--tidy-mode-padding) !important;
+  transition: var(--tidy-transition-props) !important;
+}
+
+menuitem.menuitem-iconic,
+menu.menu-iconic {
+  padding: var(--tidy-mode-padding) !important;
+}
+
+menu,
+menucaption {
+  border-radius: var(--tidy-radius) !important;
+  margin: var(--tidy-mode-margin) !important;
+  padding: var(--tidy-mode-padding) !important;
+}
+
+.panel-view-body-unscrollable {
+  border-radius: var(--tidy-radius) !important;
+  background: var(--button-background-color-hover) !important;
+  align-items: center !important;
+  padding: var(--tidy-mode-padding) !important;
+  transition: var(--tidy-transition-props) !important;
+}
+
+.PanelUI-tabitem-container.all-tabs-item {
+  margin: var(--tidy-mode-margin) !important;
+  border-radius: var(--tidy-radius) !important;
+  overflow: hidden;
+}
+
+.all-tabs-button.subviewbutton.subviewbutton-iconic {
+  padding: var(--tidy-mode-padding) 5px var(--tidy-mode-padding) calc(5px + var(--uc-arrowpanel-menuicon-margin-inline)) !important;
+  border-radius: var(--tidy-button-radius) !important;
+  transition: var(--tidy-transition-props) !important;
+}
+
+/* -----------------------------------------------------
+   Hover Effects - Light Mode
+   ----------------------------------------------------- */
 @media (prefers-color-scheme: light) {
   menu,
   menuitem,
@@ -156,7 +259,10 @@ menucaption {
         :not([cui-areatype="toolbar"]),
         [overflowedItem="true"]
       )
-      > toolbarbutton
+      > toolbarbutton,
+    .remote-tabs-close-button,
+    .panel-view-body-unscrollable,
+    .all-tabs-button.subviewbutton.subviewbutton-iconic
   ) {
     &:hover {
       background-color: var(--tidy-hover-light) !important;
@@ -164,7 +270,9 @@ menucaption {
   }
 }
 
-/* Dark mode hover color */
+/* -----------------------------------------------------
+   Hover Effects - Dark Mode
+   ----------------------------------------------------- */
 @media (prefers-color-scheme: dark) {
   menu,
   menuitem,
@@ -177,10 +285,21 @@ menucaption {
         :not([cui-areatype="toolbar"]),
         [overflowedItem="true"]
       )
-      > toolbarbutton
+      > toolbarbutton,
+    .remote-tabs-close-button,
+    .panel-view-body-unscrollable,
+    .all-tabs-button.subviewbutton.subviewbutton-iconic
   ) {
     &:hover {
       background-color: var(--tidy-hover-dark) !important;
     }
   }
 }
+
+/* -----------------------------------------------------
+   High-DPI Considerations
+   Use relative units where possible; all values are
+   customizable via preferences for fine-tuning
+   ----------------------------------------------------- */
+
+} /* End @-moz-document */
