@@ -133,12 +133,8 @@ panel {
     margin: var(--tidy-popup-shadow-margin) !important;
     min-width: 0 !important;
     min-height: 0 !important;
-    max-height: round(
-      up,
-      100% - 2 * var(--tidy-popup-shadow-margin),
-      1px
-    ) !important;
-    max-width: round(up, 100% - 2 * var(--tidy-popup-shadow-margin), 1px) !important;
+    max-height: calc(100% - 2 * var(--tidy-popup-shadow-margin)) !important;
+    max-width: calc(100% - 2 * var(--tidy-popup-shadow-margin)) !important;
     overflow: clip !important;
     scrollbar-color: transparent !important;
   }
